@@ -1,0 +1,38 @@
+<h1>Bienvendo, {{nombre}}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad: </td>
+    <dd>{{edad}}</dd>
+
+    <td>Metodo: </td>
+    <dd>{{getDescripcion()}}</dd>
+
+    <td>Capitalizado: </td>
+    <dd>{{Capital}}</dd>
+
+    <button
+    *ngIf="nombre !== 'Capitan america'" 
+    class="btn btn-primary" 
+    (click)="cambiarNombre()"
+    >
+        Cambiar Nombre
+    </button>
+
+    <button 
+    *ngIf="edad !== 40"
+    class="btn btn-success m-2" 
+    (click)="cambiarEdad()"
+    >
+        Cambiar Edad
+    </button>
+
+    <button 
+    class="btn btn-warning m-2" 
+    (click)="Limpiar()"
+    >
+        Limpiar
+    </button>
+</dl>

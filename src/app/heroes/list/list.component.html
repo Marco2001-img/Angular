@@ -1,0 +1,19 @@
+<p>listado de Heroes!</p>
+
+<div *ngIf="hereoBo; else aparece">
+    <h2>Hereo eliminado: {{hereoBo}}</h2>
+</div>
+
+<ng-template #aparece>
+    <p>No has Borrado nada</p>
+</ng-template>
+
+<button class="btn btn-outline-primary" (click)="borrar()">
+    Borrar
+</button>
+
+<ul class="list-group mt-2">
+    <li *ngFor=" let nombreH of heroeNombre" class="list-group-item">
+        {{nombreH}}
+    </li>
+</ul>
